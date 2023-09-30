@@ -872,10 +872,11 @@ img {
 /*=================5==footer===media===tablet============*/
 @media screen and (min-width: 768px) {
     .footer__container {
-        margin: 0 auto;
         display: flex;
         flex-direction: row;
         align-items: flex-start;
+        justify-content: flex-start;
+        padding-left: 108px;
         flex-wrap: wrap;
         gap: 72px 24px;
     }
@@ -921,6 +922,7 @@ img {
     .footer__container {
         gap: 0;
         flex-wrap: nowrap;
+        padding-left: 0;
     }
 
     .footer__content {
