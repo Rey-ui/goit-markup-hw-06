@@ -172,7 +172,7 @@ img {
     .header__contacs {
         display: flex;
         flex-direction: column;
-        gap: 8px;
+        gap: 8px 40px;
         flex-wrap: wrap;
         justify-content: center;
     }
@@ -228,6 +228,24 @@ img {
 }
 
 /*--------------0--header----media---desktop---------------*/
+@media screen and (min-width: 1158px) {
+    .container {
+        max-width: 1158px;
+    }
+
+    .header__menu {
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 76px;
+    }
+
+    .header__contacs {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
 /*=================1==hero==================*/
 .content {
     flex: 1 1 auto;
@@ -235,7 +253,6 @@ img {
 
 .section {
     padding: 96px 0;
-    /*max-width: 1440px;*/
 }
 
 .content__hero {
@@ -332,6 +349,23 @@ img {
 @media screen and (min-width: 1158px) and (min-resolution: 192dpi) {
     .content__hero {
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/bg/bgdesk@2x.jpg);
+
+    }
+}
+
+@media screen and (min-width: 1158px) {
+    .section {
+        padding: 120px 0;
+    }
+
+    .content__hero {
+        padding: 188px 0;
+    }
+
+    .content-hero__title {
+        font-size: 56px;
+        margin-bottom: 48px;
+        max-width: 496px;
     }
 }
 
@@ -412,7 +446,7 @@ img {
     }
 }
 
-@media(min-width:320px) and (max-width:1158px) {
+@media(min-width:320px) and (max-width:1157.98px) {
     .items-content__icon {
         display: none;
     }
@@ -442,6 +476,24 @@ img {
 }
 
 /*=================2==advantages===media===desktop============*/
+@media screen and (min-width: 1158px) {
+    .advantages-content__items {
+        flex-direction: row;
+    }
+
+    .items-content__item {
+        width: calc((100% - 72px) / 4);
+    }
+
+    .items-content__label {
+        font-size: 20px;
+    }
+
+    .items-content__text {
+        font-weight: 400;
+    }
+}
+
 /*=================3==team==================*/
 .content__team {
     background-color: #F4F4FD;
@@ -617,6 +669,18 @@ img {
 }
 
 /*=================4==portfolio===media===desktop============*/
+@media screen and (min-width: 1158px) {
+    .portfolio-content__items {
+        gap: 24px;
+        row-gap: 48px;
+    }
+
+    .portfolio-items__item {
+        width: calc((100% - 48px) / 3);
+    }
+
+}
+
 /*================5==footer===================*/
 .footer {
     background-color: #2E2F42;
@@ -808,8 +872,10 @@ img {
 /*=================5==footer===media===tablet============*/
 @media screen and (min-width: 768px) {
     .footer__container {
+        margin: 0 auto;
         display: flex;
         flex-direction: row;
+        align-items: flex-start;
         flex-wrap: wrap;
         gap: 72px 24px;
     }
@@ -847,6 +913,27 @@ img {
 }
 
 /*=================5==footer===media===desktop============*/
+@media screen and (min-width: 1158px) {
+    .footer {
+        padding: 100px 0;
+    }
+
+    .footer__container {
+        gap: 0;
+        flex-wrap: nowrap;
+    }
+
+    .footer__content {
+        margin-right: 120px;
+    }
+
+    .footer__social {
+        margin-right: 80px;
+    }
+
+    .footer__sub {}
+}
+
 /*==================modal===================*/
 .backdrop {
     position: fixed;
@@ -862,12 +949,12 @@ img {
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.is-open {
+/*.is-open {
     visibility: visible;
     opacity: 1;
     pointer-events: auto;
 }
-
+*/
 .modal {
     position: absolute;
     top: 50%;
@@ -1098,19 +1185,24 @@ img {
 /*===================modal===media===tablet============*/
 @media screen and (min-width: 768px) {
     .modal {
-
         max-width: 408px;
         max-height: 100%;
         min-height: 584px;
         padding: 72px 25px 24px 25px;
-        background-color: #FCFCFC;
-        border-radius: 4px;
-        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
-        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 }
 
 /*===================modal===media===desktop============*/
+@media screen and (min-width: 1158px) {
+    .modal {
+        width: 100%;
+        max-width: 408px;
+        max-height: 100%;
+        min-height: 584px;
+        padding: 72px 24px 24px 24px;
+    }
+}
+
 /*==================mobail-menu===================*/
 .mobail-menu {
     background-color: #fff;
